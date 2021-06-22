@@ -43,3 +43,40 @@ print("exists is 1?", exists is 1)
 print("exists == 1?", exists == 1)
 print("id of exists", id(exists))
 print("id of 1", id(int(1)))
+
+def get_list(input_list=None):
+    if input_list is None:
+        input_list = []
+
+    return input_list
+
+
+empty_list = []
+res = get_list()
+print("empty list == res?", empty_list == res)
+print("empty list is res?", empty_list is res)
+
+print("empty list is res?", empty_list is get_list(empty_list))
+
+cache = {}
+
+def get_user(user_id):
+    if user_id not in cache:
+        u = ...
+        cache[user_id] = u
+        return u
+    return cache[user_id]
+
+u1 = get_user(7)
+u2 = get_user(7)
+"""
+u1 == u2  # is True
+
+u1.id == u2.id  # is True
+
+u1 is  not u2  # is True
+"""
+
+print("type(a)", type(a))
+print("type(a) is type(b)", type(a) is type(b))
+print("type(a) is type(c)", type(a) is type(c))
