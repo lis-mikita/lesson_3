@@ -6,7 +6,6 @@ print("id of a", id(a))
 print("id of b", id(b))
 print("id of c", id(c))
 
-
 print("a == b", a == b)
 print("a is b?", a is b)
 
